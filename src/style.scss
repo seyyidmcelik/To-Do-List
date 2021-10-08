@@ -1,0 +1,77 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  header {
+    padding-bottom: 40px;
+    min-width: 250px;
+  }
+  main {
+    min-width: 250px;
+    ul {
+      li {
+        display: flex;
+        justify-content: space-between;
+        span {
+          display: inline-block;
+          width: 100px;
+        }
+        .listButtons {
+          display: inline-block;
+        }
+        .status {
+          margin-right: 10px;
+        }
+        .green {
+          polyline {
+            stroke: rgb(0, 255, 0);
+          }
+        }
+        .delete {
+          path {
+            stroke: red;
+          }
+        }
+        .delete,
+        .status {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  section {
+    padding-top: 40px;
+    .clearCompleted {
+      margin-bottom: 20px;
+    }
+    input[type="text"] {
+      padding: 4px 0 4px 6px;
+      border: 0 solid green;
+      border-bottom: 1px solid rgb(80, 79, 74);
+      margin-right: 10px;
+      &:focus-visible {
+        outline: none;
+      }
+    }
+    input[type="submit"],
+    button {
+      border: none;
+      background-color: blue;
+      color: white;
+      padding: 8px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button {
+      background-color: rgb(16, 80, 16);
+    }
+  }
+}
